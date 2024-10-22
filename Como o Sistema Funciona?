@@ -1,0 +1,49 @@
+O sistema ERP da Sisplan propõe um gerenciamento e controle de todas as áreas essenciais da indústria.
+Entre elas está o Administrativo, Loja, Produção, Fiscal, Tercerização e Outros.
+
+Para ser um sistema totalmente interativo e independente com o usuário, o sistema se utiliza de alguns tipo de telas essenciais:
+- Telas de Cadastro: Telas que cadastro toda e qualquer tipo de informação( normalmente encontrada no Menu 0, aonde tem essas telas auxiliares )
+- Telas de Processos: Telas que permitem fazer uma função real na empresa, as mais comuns ( Entrada de NFe, Faturamento, Baixa, Lançamento e etc . . .)
+- Telas de Relatórios: Telas que perimitem gerar relatórios para análise dos dados da empresa
+
+COMO IDENTIFICAR UMA TELA ?
+
+Como dito são várias áreas do sistema, então são várias telas que são encontradas. De empresa em empresa pode ter níveis diferentes ou nem aparecer na aba de Menus, mas é
+a partir do FORM da tela que encontramos ela. Os forms sempre seguem essa sequência:
+
+tfm + +"Prefixo" + "Nome" 
+
+Ex.: tfmFatImpressao, FatSimples, FacMov3, RelRepComissao
+
+COMO UM POCESSO FUNCIONA ?
+
+Para um processo funcionar ele depende que o seu ARQUIVO BPL esteja na pasta raiz do Sisplan ( C:/Sisplan) e que seja inserido os devidos dados como devem ser na tela:
+
+pctFaturmanto.bpl ---> Permite que os processos de Faturamento Funcionem
+
+COMO O SISTEMA SE INTEGRA COM A MÁQUINA:
+
+Dentro da Pasta Raiz tem um arquivo chamado SISPLAN.INI que norlmamente possui os seguintes tópicos escritos :
+
+[Caminho]
+path=C:\Sisplan   ->> Caminho daonde está instalado o Sisplan
+fotos=            ->> Caminho daonde está armazenado as Fotos utilizadas pelo Sistema
+interno=S
+
+[BANCO]
+banco=Firebird                              ->> Banco( FireBird, MySQLSERVER, Oracle, PostGress )
+servidor=172.20.10.204:                     ->> Servidor que está instalado o Serviço do Banco
+base=d:\dados\Bases\10104F.FDB              ->> Caminho daonde está instalado a Base
+usuario=SYSDBA                              ->> Usuário de Acesso ao Banco de Dados
+senha=%&1E438575B16A10EDB2                  ->> Senha de Acesso ao Banco de Dados
+AdaptarCompletoEm=26/06/2024 07:49:42
+TipoBanco=FIREBIRD
+porta=3051
+AdaptarCompletoIdx=17/08/2023 10:15:06
+RecompilarIndices=01/07/2020 14:34:42
+VERSAO=FB3
+EncriptarSenha=sim
+CHARSET=
+
+SE O INI NÃO ESTIVER CONFIGURADO OU NÃO ESTIVER NA PASTA, NADA DO SISTEMA IRÁ FUNCIONAR
+
